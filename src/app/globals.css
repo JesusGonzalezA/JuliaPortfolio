@@ -5,6 +5,11 @@
   --color-img-background: #9a86b928;
 }
 
+
+@viewport {
+  min-zoom: 1.0;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
