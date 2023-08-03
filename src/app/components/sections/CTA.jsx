@@ -12,6 +12,7 @@ export default function CTA() {
     } else {
       ctaSection.current.style.zIndex = 0
     }
+    console.log(window.scrollY)
   }
 
   useEffect(() => {

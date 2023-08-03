@@ -1,6 +1,6 @@
 import Quote from "./components/quote/Quote";
 import Header from "./components/header/Header";
-import HorizontalScroll from "./components/abilities/HorizontalScroll";
+import Abilities from "./components/abilities/Abilities";
 import View from "./components/abilities/View";
 import styles from "./page.module.css";
 import projects from "./data/projects";
@@ -38,9 +38,9 @@ export default function Home() {
             <CardList cards={webdesign} />
           </section>
 
-          <section className={styles.horizontalShowoff}>
+          <section className={styles.abilitiesShowoff}>
             <h2>More about me</h2>
-            <HorizontalScroll
+            <Abilities
               views={abilities.map((ability) => (
                 <View {...ability} />
               ))}
