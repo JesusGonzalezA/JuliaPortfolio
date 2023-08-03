@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { config } from "../../data/config";
 import styles from "./cta.module.css";
 
 export default function CTA() {
@@ -26,7 +27,7 @@ export default function CTA() {
       <section className={styles.greeting} ref={ctaSection}>
           <h2>Julia Garbín Lourido</h2>
           <p>Digital Specialist</p>
-          <button href="#contact_me" ref={ctaButton}>Contact me</button>
+          <a href={`mailto:${config.email}`} ref={ctaButton} className={styles.ctaButton}>Contact me</a>
       </section>
       <div aria-hidden="true" className={styles.greetingTransparent}></div>
     </>

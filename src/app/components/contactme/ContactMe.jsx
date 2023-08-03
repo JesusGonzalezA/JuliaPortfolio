@@ -20,7 +20,6 @@ export default function ContactMe () {
                 target="_top"
                 className={styles.contactMe}
             >
-                <textarea onChange={handleInputChange} name="content" maxLength={500} className={styles.textarea} />
                 <button type="submit">Contact me!</button>
             </form>
         </div>

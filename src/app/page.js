@@ -7,7 +7,6 @@ import links from "./data/links";
 import abilities from "./data/abilities";
 import webdesign from "./data/webdesign";
 import Footer from "./components/footer/Footer";
-import ContactMe from "./components/contactme/ContactMe";
 import CardList from "./components/card/CardList";
 import CTA from "./components/sections/CTA";
 
@@ -43,8 +42,6 @@ export default function Home() {
               <View key={`ability_${index}`} {...ability} />
             ))}
           </section>
-
-          <ContactMe />
         </div>
       </main>
       <Footer />
