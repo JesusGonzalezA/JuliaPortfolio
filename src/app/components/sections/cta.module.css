@@ -1,0 +1,30 @@
+.greetingTransparent {
+    height: 100vh;
+    top: 0;
+    display: block;
+  }
+  
+.greeting h2 {
+    margin: 0;
+    font-size: 7vw;
+}
+
+.greeting p {
+    color: var(--color-main);
+    font-size: 5vw;
+}
+
+.greeting {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color: transparent;
+    z-index: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+.marquee {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: var(--color-main);
+    color: var(--color-background)
+}
+
+.quote {
+    font-size: 5vw;
+    will-change: transform;
+    transform: translateX(0);
+    white-space: nowrap;
+    animation: marquee 24s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
