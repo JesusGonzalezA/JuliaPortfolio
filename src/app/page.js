@@ -1,6 +1,5 @@
 import Quote from "./components/quote/Quote";
 import Header from "./components/header/Header";
-import Abilities from "./components/abilities/Abilities";
 import View from "./components/abilities/View";
 import styles from "./page.module.css";
 import projects from "./data/projects";
@@ -40,11 +39,9 @@ export default function Home() {
 
           <section className={styles.abilitiesShowoff}>
             <h2>More about me</h2>
-            <Abilities
-              views={abilities.map((ability) => (
-                <View {...ability} />
-              ))}
-            />
+            {abilities.map((ability, index) => (
+              <View key={`ability_${index}`} {...ability} />
+            ))}
           </section>
 
           <ContactMe />
