@@ -17,7 +17,7 @@ export default function ContactMe () {
             <form 
                 action={`mailto:${config.email}?subject=hello&body=${formValues.content}`} 
                 method="get" encType="text/plain" 
-                target="_blank"
+                target="_top"
                 className={styles.contactMe}
             >
                 <textarea onChange={handleInputChange} name="content" maxLength={500} className={styles.textarea} />
