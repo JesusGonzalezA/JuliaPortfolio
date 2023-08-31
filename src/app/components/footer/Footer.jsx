@@ -1,17 +1,20 @@
+import { Divider } from "@mui/material";
+import styles from "./footer.module.css";
 
 export default function Footer () {
     return (
-        <footer>
+        <footer className={styles.footer}>
+          <Divider />
           <div>
             <ul>
               <li>
-                <a href="#">LinkedIN</a>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
+                <a href="#about_me">About</a>
               </li>
               <li>
                 <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
               </li>
             </ul>
 

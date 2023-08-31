@@ -9,12 +9,12 @@ const links = [
     value: "Experience",
   },
   {
-    src: "#contact_me",
-    value: "Contact",
+    src: "#about_me",
+    value: "About",
   },
   {
     src: "#",
-    value: "Blog",
+    value: "Contact",
   },
 ];
 

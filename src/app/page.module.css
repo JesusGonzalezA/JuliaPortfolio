@@ -11,17 +11,17 @@
   margin-right: 5vw;
 }
 
-.abilitiesShowoff h2 {
+.view {
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
-.abilitiesShowoff h2, .showoff h2 {
+.view h2, .showoff h2 {
+  margin-left: 5vw;
+  margin-right: 5vw;
   font-size: 6vw;
-}
-
-.abilitiesShowoff h2 span, .showoff h2 span {
-  font-size: 4vw;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .section__left {

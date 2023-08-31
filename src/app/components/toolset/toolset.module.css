@@ -1,0 +1,14 @@
+.skillset {
+    display: grid;
+    column-gap: 10vw;
+    row-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skillset li {
+    filter: grayscale(100%);
+}
+
+.skillset li:hover {
+    filter: none;
+}

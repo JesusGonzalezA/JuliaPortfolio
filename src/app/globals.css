@@ -65,13 +65,6 @@ button:hover, button:active, button:focus {
   color: var(--color-background);
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#experience {
+#experience, #about_me {
   padding-top: 30px;
 }

@@ -1,14 +1,14 @@
 import Quote from "./components/quote/Quote";
 import Header from "./components/header/Header";
-import View from "./components/abilities/View";
+import AboutMe from "./components/aboutme/AboutMe";
 import styles from "./page.module.css";
 import projects from "./data/projects";
 import links from "./data/links";
-import abilities from "./data/abilities";
-import webdesign from "./data/webdesign";
 import Footer from "./components/footer/Footer";
 import CardList from "./components/card/CardList";
-import CTA from "./components/sections/CTA";
+import CTA from "./components/cta/CTA";
+import ExpTimeline from "./components/timeline/Timeline";
+import Toolset from "./components/toolset/Toolset";
 
 export default function Home() {
   return (
@@ -21,26 +21,25 @@ export default function Home() {
 
           <section
             id="experience"
-            className={[styles.showoff, styles.section__right].join(" ")}
+            className={[styles.showoff, styles.section__left].join(" ")}
           >
-            <h2 aria-label="Experiencia as digital marketing">
-              EXP / <span>Digital marketing</span>
-            </h2>
+            <h2>Experience</h2>
+            <ExpTimeline />
+          </section>
+
+          <section className={[styles.view].join(" ")} id="about_me">
+            <h2>About me</h2>
+            <AboutMe />
+          </section>
+
+          <section className={[styles.showoff, styles.section__left].join(" ")}>
+            <h2>Projects</h2>
             <CardList cards={projects} />
           </section>
 
           <section className={[styles.showoff, styles.section__left].join(" ")}>
-            <h2 aria-label="Experiencia as web designer">
-              EXP / <span>Web design</span>
-            </h2>
-            <CardList cards={webdesign} />
-          </section>
-
-          <section className={styles.abilitiesShowoff}>
-            <h2>More about me</h2>
-            {abilities.map((ability, index) => (
-              <View key={`ability_${index}`} {...ability} />
-            ))}
+            <h2>Skills and tools</h2>
+            <Toolset />
           </section>
         </div>
       </main>

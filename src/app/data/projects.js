@@ -8,18 +8,19 @@
 
 const projects = [
   {
-    title: "Zink Marketing",
-    content: "Digital specialist",
-    url: "https://zinkmarketing.es/",
-    imageSrc: "/assets/zink.png",
-    alt: "Zink marketing logo",
+    title: "Surf Videographer",
+    content: "Video production, realisation and post-production.",
+    url: "https://www.youtube.com/@PRADOSURFESCOLA",
+    imageSrc: "/assets/pradosurf.jpeg",
+    alt: "Prado surf club",
   },
   {
-    title: "Moche",
-    content: "Digital specialist",
-    url: "https://zinkmarketing.es/",
-    imageSrc: "/assets/moche.png",
-    alt: "Zink marketing logo",
+    title: "Soccer spot Videographer",
+    content:
+      "Recording and editing of a spot for Pontevedra Football Club on the occasion of the appeal to the fans.",
+    url: "https://m.youtube.com/watch?v=x8rTxFrCwh4",
+    imageSrc: "/assets/eisv.png",
+    alt: "Video and image vigo school",
   },
 ];
 
