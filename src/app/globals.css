@@ -17,7 +17,7 @@
 
 html {
   font-family: sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
