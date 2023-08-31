@@ -8,7 +8,7 @@ import Press from './Press';
 
 export default function ExpTimeline() {
   return (
-    <Timeline position="alternate">
+    <Timeline position='alternate'>
       <Zink />
       <ZinkTrainee />
       <HierbabuenaHerboristeria />

@@ -6,23 +6,12 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import Typography from '@mui/material/Typography';
-import { Chip, Divider, List, ListItem } from '@mui/material';
 
 export default function Press() {
     return (
         <TimelineItem>
-            <TimelineOppositeContent
-                sx={{ m: 'auto 0' }}
-                align="right"
-                variant="body2"
-                color="text.secondary"
-            >
-                <Typography align='right'>Press photography assistant</Typography>
-                <Divider />
-                <List>
-                    <ListItem sx={{ justifyContent: 'flex-end' }}>Local press photography</ListItem>
-                </List>
+            <TimelineOppositeContent color="text.secondary" sx={{ alignSelf: 'center' }}>
+                Press photography assistant
             </TimelineOppositeContent>
 
             <TimelineSeparator>
@@ -31,11 +20,8 @@ export default function Press() {
                 <TimelineConnector />
             </TimelineSeparator>
 
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-                <Typography variant="h5" component="span">
-                    Lanfoco SL <br />
-                </Typography>
-                <Chip label='Apr 2019 - Oct 2019' variant='outlined' />
+            <TimelineContent sx={{ alignSelf: 'center' }}>
+                Lanfoco SL
             </TimelineContent>
         </TimelineItem>
     )
