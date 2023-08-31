@@ -17,7 +17,9 @@ export default function Home() {
       <main>
         <CTA />
         <div className={styles.overflowContainer}>
-          <Quote>This sentence should be as long as the width &nbsp;</Quote>
+          <Quote>
+            The best way to predict the future is to create it &nbsp;
+          </Quote>
 
           <section
             id="experience"
