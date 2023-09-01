@@ -10,6 +10,10 @@ export default function AboutMe () {
                         src="/assets/portrait.jpeg"
                         fill
                         alt={"Julia Garbin"}
+                        style={{
+                            border: 'solid 1px transparent',
+                            borderRadius: '50%'
+                        }}      
                     />
                 </div>
             </div>

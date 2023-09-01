@@ -9,6 +9,7 @@ import CardList from "./components/card/CardList";
 import CTA from "./components/cta/CTA";
 import ExpTimeline from "./components/timeline/Timeline";
 import Toolset from "./components/toolset/Toolset";
+import SkillSet from "./components/skillset/SkillSet";
 
 export default function Home() {
   return (
@@ -23,25 +24,43 @@ export default function Home() {
 
           <section
             id="experience"
-            className={[styles.showoff, styles.section__left].join(" ")}
+            className={[styles.showoff, styles.section__right].join(" ")}
           >
             <h2>Experience</h2>
             <ExpTimeline />
           </section>
 
-          <section className={[styles.view].join(" ")} id="about_me">
+          <section
+            className={[styles.view, styles.invert].join(" ")}
+            id="about_me"
+          >
             <h2>About me</h2>
             <AboutMe />
           </section>
 
-          <section className={[styles.showoff, styles.section__left].join(" ")}>
+          <section
+            className={[styles.showoff, styles.section__right].join(" ")}
+          >
             <h2>Projects</h2>
             <CardList cards={projects} />
           </section>
 
-          <section className={[styles.showoff, styles.section__left].join(" ")}>
-            <h2>Skills and tools</h2>
+          <section
+            className={[
+              styles.showoff,
+              styles.section__left,
+              styles.invert,
+            ].join(" ")}
+          >
+            <h2>Tools</h2>
             <Toolset />
+          </section>
+
+          <section
+            className={[styles.showoff, styles.section__right].join(" ")}
+          >
+            <h2>Skills</h2>
+            <SkillSet />
           </section>
         </div>
       </main>

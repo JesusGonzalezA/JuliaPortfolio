@@ -1,5 +1,6 @@
 .footer {
-    margin-top: 40px;
+    padding-top: 40px;
+    background-color: inherit;
 }
 
 .footer ul {
