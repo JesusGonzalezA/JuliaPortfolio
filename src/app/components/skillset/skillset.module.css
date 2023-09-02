@@ -2,5 +2,12 @@
     display: grid;
     column-gap: 10vw;
     row-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+@media only screen and (min-width: 768px) {
+    .skillset {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
