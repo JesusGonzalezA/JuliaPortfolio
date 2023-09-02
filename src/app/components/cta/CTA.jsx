@@ -9,7 +9,7 @@ export default function CTA() {
   const ctaButton = useRef(null)
 
   const handleScroll = (e) => {
-    if ((window.scrollY + 50) > ctaButton.current.getBoundingClientRect().top) {
+    if (window.scrollY > (ctaButton.current.offsetTop - window.innerHeight/10 - 14)) {
       ctaSection.current.style.zIndex = -1
     } else {
       ctaSection.current.style.zIndex = 0
