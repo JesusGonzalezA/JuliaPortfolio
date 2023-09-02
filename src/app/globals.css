@@ -20,10 +20,6 @@ html {
   overflow-x: hidden;
 }
 
-html.scroll-type {
-  scroll-snap-type: y mandatory;
-}
-
 body {
   background-color: var(--color-background);
   color: var(--color-main2);
@@ -69,4 +65,10 @@ button {
 button:hover, button:active, button:focus {
   background-color: var(--color-main);
   color: var(--color-background);
+}
+
+@media only screen and (min-width: 768px) {
+  html.scroll-type {
+    scroll-snap-type: y mandatory;
+  }
 }
