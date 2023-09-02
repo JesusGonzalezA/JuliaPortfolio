@@ -1,15 +1,17 @@
-import Quote from "./components/quote/Quote";
-import Header from "./components/header/Header";
-import AboutMe from "./components/aboutme/AboutMe";
-import styles from "./page.module.css";
-import projects from "./data/projects";
+import {
+  Quote,
+  Header,
+  AboutMe,
+  Footer,
+  CTA,
+  ExpTimeline,
+  Toolset,
+  SkillSet,
+  Projects,
+  VideoGraphy,
+} from "./components";
 import links from "./data/links";
-import Footer from "./components/footer/Footer";
-import CardList from "./components/card/CardList";
-import CTA from "./components/cta/CTA";
-import ExpTimeline from "./components/timeline/Timeline";
-import Toolset from "./components/toolset/Toolset";
-import SkillSet from "./components/skillset/SkillSet";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -26,7 +28,6 @@ export default function Home() {
             id="experience"
             className={[styles.showoff, styles.section__right].join(" ")}
           >
-            <h2>Experience</h2>
             <ExpTimeline />
           </section>
 
@@ -34,7 +35,6 @@ export default function Home() {
             className={[styles.view, styles.invert].join(" ")}
             id="about_me"
           >
-            <h2>About me</h2>
             <AboutMe />
           </section>
 
@@ -42,7 +42,7 @@ export default function Home() {
             className={[styles.showoff, styles.section__right].join(" ")}
           >
             <h2>Projects</h2>
-            <CardList cards={projects} />
+            {/* <Projects /> */}
           </section>
 
           <section
@@ -52,14 +52,22 @@ export default function Home() {
               styles.invert,
             ].join(" ")}
           >
-            <h2>Tools</h2>
-            <Toolset />
+            <VideoGraphy />
           </section>
 
           <section
             className={[styles.showoff, styles.section__right].join(" ")}
           >
-            <h2>Skills</h2>
+            <Toolset />
+          </section>
+
+          <section
+            className={[
+              styles.showoff,
+              styles.section__left,
+              styles.invert,
+            ].join(" ")}
+          >
             <SkillSet />
           </section>
         </div>

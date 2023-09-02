@@ -20,6 +20,10 @@ html {
   overflow-x: hidden;
 }
 
+html.fixed-scroll {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-main2);
