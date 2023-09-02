@@ -2,7 +2,7 @@
     display: grid;
     column-gap: 10vw;
     row-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .skillset li {
@@ -15,4 +15,10 @@
 
 .invert .skillset li {
     filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.8));
+}
+
+@media only screen and (min-width: 768px) {
+    .skillset {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
