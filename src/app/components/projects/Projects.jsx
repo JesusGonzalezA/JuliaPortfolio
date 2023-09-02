@@ -1,52 +1,75 @@
-"use client";
-import { useRef, useEffect } from "react";
+"use client"
+import { useEffect, useRef } from "react";
 import {
   motion,
   useInView,
   useScroll,
   useTransform
 } from "framer-motion";
+import projects from "../../data/projects";
 import styles from "./projects.module.css";
+import Image from "next/image";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Image({ id }) {
-//   const ref = useRef(null);
-
-//   const isInView = useInView(ref)
-//   let style = {}
-//   if (isInView) {
-//       const { scrollYProgress } = useScroll({ target: ref });
-//       const y = useParallax(scrollYProgress, 300);
-//       style = { y }
-//   }
+function Project({ name, src }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 150);
 
   return (
-    <section className={styles.section}>
-      {/* <div ref={ref}>
-        <img className={styles.img} src={`/${id}.jpg`} alt="A London skyscraper" />
+    <div className={styles.project}>
+      <div className={styles.imgContainer} ref={ref}>
+        <Image src={src} fill role="presentation" />
       </div>
-      <motion.h2 className={styles.h2} style={style}>{`#00${id}`}</motion.h2> */}
-    </section>
+      <motion.h3 className={styles.animatedTitle} style={{ y }}>{name}</motion.h3>
+    </div>
   );
 }
 
 export default function Projects() {
-    const containerRef = useRef(null);
-    // const isInView = useInView(containerRef);
+  const containerRef = useRef(null);
+  const ref = useRef();
+  const isInView = useInView(ref, { once: true });
 
-    // if (isInView)
-    //     document.documentElement.classList.add('fixed-scroll')
-    // else 
-    //     document.documentElement.classList.remove('fixed-scroll')
-    
+  const handleScroll = (e) => {
+    const { offsetTop } = containerRef.current;
+    const { height } = containerRef.current.getBoundingClientRect();
+    const sectionHeight = window.innerHeight * 0.9;
+    const topBarHeight = window.innerHeight / 10;
+    const topLimit = offsetTop;
+    const bottomLimit = offsetTop + height - sectionHeight;
+    if ((window.scrollY + topBarHeight) > topLimit && window.scrollY < bottomLimit) {
+      document.documentElement.classList.add("scroll-type");
+    } else {
+      document.documentElement.classList.remove("scroll-type");
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  })
+
+
   return (
-    <div ref={containerRef}>
-      {[1, 2, 3, 4, 5].map((image) => (
-        <Image id={image} />
-      ))}
+    <div style={{ width: "100%" }}>
+      <h2 ref={ref} style={{
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                marginBottom: 0
+      }}>Projects</h2>
+    
+      <div ref={containerRef}>
+        {projects.map((project) => (
+          <Project {...project} />
+        ))}
+      </div>
     </div>
   );
 }

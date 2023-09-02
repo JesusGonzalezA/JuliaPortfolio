@@ -41,8 +41,7 @@ export default function Home() {
           <section
             className={[styles.showoff, styles.section__right].join(" ")}
           >
-            <h2>Projects</h2>
-            {/* <Projects /> */}
+            <Projects />
           </section>
 
           <section

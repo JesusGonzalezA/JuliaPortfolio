@@ -2,7 +2,7 @@
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import CardList from '../card/CardList';
-import projects from "../../data/projects";
+import videography from "../../data/videography";
 
 export default function AboutMe () {
     const ref = useRef();
@@ -15,7 +15,7 @@ export default function AboutMe () {
                 opacity: isInView ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
             }}>Videography</h2>
-            <CardList cards={projects} />
+            <CardList cards={videography} />
         </>
     )
 }

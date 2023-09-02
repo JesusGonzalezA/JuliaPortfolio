@@ -20,7 +20,7 @@ html {
   overflow-x: hidden;
 }
 
-html.fixed-scroll {
+html.scroll-type {
   scroll-snap-type: y mandatory;
 }
 
