@@ -5,12 +5,11 @@
 }
 
 .project {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  padding-top: 15vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
   position: relative;
   scroll-snap-align: center;
@@ -49,5 +48,5 @@
 }
 
 .title {
-  margin-bottom: -5vh !important;
+  margin-bottom: 70px !important;
 }

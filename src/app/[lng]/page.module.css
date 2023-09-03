@@ -50,3 +50,7 @@
 .section__right h2 {
   align-self: flex-end;
 }
+
+.mark {
+  scroll-margin-top: 10vh;
+}

@@ -25,16 +25,19 @@ export default async function Home({ params: { lng } }) {
         <CTA lng={lng} />
         <div className={styles.overflowContainer}>
           <Quote>{t("quote")} &nbsp;</Quote>
-
           <section
+            className={[
+              styles.mark,
+              styles.showoff,
+              styles.section__right,
+            ].join(" ")}
             id="experience"
-            className={[styles.showoff, styles.section__right].join(" ")}
           >
             <ExpTimeline lng={lng} />
           </section>
 
           <section
-            className={[styles.view, styles.invert].join(" ")}
+            className={[styles.mark, styles.view, styles.invert].join(" ")}
             id="about_me"
           >
             <AboutMe lng={lng} />

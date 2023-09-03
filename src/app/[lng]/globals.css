@@ -66,7 +66,3 @@ button:hover, button:active, button:focus {
   background-color: var(--color-main);
   color: var(--color-background);
 }
-
-html.scroll-type {
-  scroll-snap-type: y mandatory;
-}

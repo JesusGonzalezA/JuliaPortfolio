@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import projects from "../../../data/projects";
 import styles from "./projects.module.css";
 import Image from "next/image";
@@ -19,32 +19,9 @@ function Project({ name, src }) {
 }
 
 export default function Projects({ lng }) {
-  const containerRef = useRef(null);
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
   const { t } = useTranslation(lng);
-
-  const handleScroll = (e) => {
-    const { offsetTop } = containerRef.current;
-    const { height } = containerRef.current.getBoundingClientRect();
-    const sectionHeight = window.innerHeight * 0.9;
-    const topBarHeight = window.innerHeight / 10;
-    const topLimit = offsetTop;
-    const bottomLimit = offsetTop + height - sectionHeight;
-    if ((window.scrollY + topBarHeight) > topLimit && window.scrollY < bottomLimit) {
-      document.documentElement.classList.add("scroll-type");
-    } else {
-      document.documentElement.classList.remove("scroll-type");
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  })
-
 
   return (
     <div style={{ width: "100%" }}>
@@ -56,7 +33,7 @@ export default function Projects({ lng }) {
                 textAlign: "right"
       }} className={styles.title}>{t("projects")}</h2>
     
-      <div ref={containerRef}>
+      <div>
         {projects.map((project, index) => (
           <Project key={`project_${index}`} {...project} />
         ))}
