@@ -6,15 +6,15 @@
 const links = [
   {
     src: "#experience",
-    value: "Experience",
+    translationId: "experience",
   },
   {
     src: "#about_me",
-    value: "About",
+    translationId: "about",
   },
   {
     src: "#",
-    value: "Contact",
+    translationId: "contact",
   },
 ];
 

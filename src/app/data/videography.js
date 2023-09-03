@@ -8,19 +8,18 @@
 
 const videography = [
   {
-    title: "Surf Videographer",
-    content: "Video production, realisation and post-production.",
+    titleTranslationId: "videographyTitleSurf",
+    contentTranslationId: "videographyContentSurf",
     url: "https://www.youtube.com/@PRADOSURFESCOLA",
     imageSrc: "/assets/pradosurf.jpeg",
-    alt: "Prado surf club",
+    altTranslationId: "videographyAltSurf",
   },
   {
-    title: "Soccer spot Videographer",
-    content:
-      "Recording and editing of a spot for Pontevedra Football Club on the occasion of the appeal to the fans.",
+    titleTranslationId: "Soccer spot Videographer",
+    contentTranslationId: "videographyContentSpot",
     url: "https://m.youtube.com/watch?v=x8rTxFrCwh4",
     imageSrc: "/assets/eisv.png",
-    alt: "Video and image vigo school",
+    altTranslationId: "Video and image vigo school",
   },
 ];
 

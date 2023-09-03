@@ -1,0 +1,59 @@
+.overflowContainer {
+  background-color: var(--color-background);
+}
+
+.invert {
+  background-color: var(--color-main);
+  color: var(--color-background);
+}
+
+.invert h1, .invert h2, .invert h3 {
+  color: var(--color-background);
+}
+
+.showoff {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 70px;
+  padding-top: 30px;
+}
+
+.view {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 70px;
+  padding-top: 30px;
+}
+
+.view h2, .showoff h2 {
+  font-size: clamp(40px, 6vw, 80px);
+  margin-bottom: 70px;
+  margin-top: 40px;
+}
+
+.section__left {
+  display: flex;
+}
+
+.section__left h2 {
+  align-self: flex-start;
+}
+
+.section__right {
+  display: flex;
+}
+
+.section__right h2 {
+  align-self: flex-end;
+}
+
+@media only screen and (min-width: 768px) {
+  .view h2, .showoff h2 {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}

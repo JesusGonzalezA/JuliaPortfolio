@@ -1,0 +1,58 @@
+.animatedTitle {
+  left: 0;
+  line-height: 1.2;
+  position: absolute;
+  align-self: center !important;
+  top: 0;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  color: var(--color-main-2);
+}
+
+.project {
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+}
+
+.imgContainer {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.imgContainer > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin-bottom: -70px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .animatedTitle {
+      top: unset;
+      left: calc(50% + 130px);
+      margin: 0;
+  }
+
+  .project {
+      align-items: center;
+  }
+}
