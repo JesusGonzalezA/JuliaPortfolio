@@ -1,31 +1,19 @@
 "use client"
 import { useEffect, useRef } from "react";
-import {
-  motion,
-  useInView,
-  useScroll,
-  useTransform
-} from "framer-motion";
 import projects from "../../../data/projects";
 import styles from "./projects.module.css";
 import Image from "next/image";
 import { useTranslation } from "../../../i18n/client";
-
-function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
+import { useInView } from "framer-motion";
 
 function Project({ name, src }) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 150);
-
   return (
     <div className={styles.project}>
-      <div className={styles.imgContainer} ref={ref}>
+      <h3 className={styles.animatedTitle}>{name}</h3>
+      <div className={styles.imgContainer}>
         <Image src={src} fill role="presentation" />
       </div>
-      <motion.h3 className={styles.animatedTitle} style={{ y }}>{name}</motion.h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore nesciunt alias dolore! Corporis odit provident aperiam porro facilis, veniam vel ab! Laboriosam at eveniet quam, rerum nihil assumenda consectetur atque!</p>
     </div>
   );
 }

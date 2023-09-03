@@ -1,18 +1,18 @@
 const projects = [
   {
-    name: "Surf Videographer",
+    name: "Zink marketing",
     src: "/assets/projects/proyecto.png",
   },
   {
-    name: "Soccer spot",
+    name: "EMallorca Experience Week",
     src: "/assets/projects/proyecto2.png",
   },
   {
-    name: "Soccer spot",
+    name: "Novatos",
     src: "/assets/projects/proyecto4.png",
   },
   {
-    name: "Soccer spot",
+    name: "Santa baia Jiu-Jitsu",
     src: "/assets/projects/proyecto3.png",
   },
 ];

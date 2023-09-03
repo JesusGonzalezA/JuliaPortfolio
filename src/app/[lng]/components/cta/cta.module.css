@@ -6,12 +6,14 @@
   
 .greeting h2 {
     margin: 0;
-    font-size: 7vw;
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: normal;
 }
 
 .greeting p {
     color: var(--color-main);
     font-size: 5vw;
+    margin-bottom: 50px;
 }
 
 .greeting {

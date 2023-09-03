@@ -67,8 +67,6 @@ button:hover, button:active, button:focus {
   color: var(--color-background);
 }
 
-@media only screen and (min-width: 768px) {
-  html.scroll-type {
-    scroll-snap-type: y mandatory;
-  }
+html.scroll-type {
+  scroll-snap-type: y mandatory;
 }
