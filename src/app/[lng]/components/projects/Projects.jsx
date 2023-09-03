@@ -64,7 +64,8 @@ export default function Projects({ lng }) {
                 transform: isInView ? "none" : "translateX(-200px)",
                 opacity: isInView ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-                marginBottom: 0
+                marginBottom: 0,
+                textAlign: "right"
       }} className={styles.title}>{t("projects")}</h2>
     
       <div ref={containerRef}>
