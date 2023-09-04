@@ -11,7 +11,7 @@ function Project({ name, src }) {
     <div className={styles.project}>
       <h3 className={styles.animatedTitle}>{name}</h3>
       <div className={styles.imgContainer}>
-        <Image src={src} fill role="presentation" />
+        <Image src={src} fill role="presentation" alt="" />
       </div>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore nesciunt alias dolore! Corporis odit provident aperiam porro facilis, veniam vel ab! Laboriosam at eveniet quam, rerum nihil assumenda consectetur atque!</p>
     </div>

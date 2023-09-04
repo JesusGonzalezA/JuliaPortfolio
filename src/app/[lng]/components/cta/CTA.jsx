@@ -7,9 +7,9 @@ import { useTranslation } from "../../../i18n/client";
 
 export default function CTA({ lng }) {
   const { t } = useTranslation(lng);
-  const ctaSection = useRef(null)
-  const ctaButton = useRef(null)
-  const ctaP = useRef(null)
+  const ctaSection = useRef(null);
+  const ctaButton = useRef(null);
+  const ctaP = useRef(null);
 
   const handleScroll = (e) => {
     const stickyHeaderWidth = window.innerHeight/10
@@ -17,11 +17,8 @@ export default function CTA({ lng }) {
     const buttonYPos = ctaButton.current.offsetTop
     const pMarginBottom = parseInt(document.defaultView.getComputedStyle(ctaP.current).marginBottom)
     const limit = buttonYPos - stickyHeaderWidth - buttonWidth - pMarginBottom
-    if (window.scrollY > limit) {
-      ctaSection.current.style.zIndex = -1
-    } else {
-      ctaSection.current.style.zIndex = 0
-    }
+
+    ctaSection.current.style.zIndex = (window.scrollY < limit) ? 0 : -1
   }
 
   useEffect(() => {
@@ -29,7 +26,11 @@ export default function CTA({ lng }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-  })
+  }, [])
+
+  useEffect(() => {
+    handleScroll()
+  }, [])
 
   return (
     <>

@@ -46,6 +46,17 @@
     text-decoration: none;
 }
 
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card_container > li {
+    width: 100%;
+}
+
 @media only screen and (min-width: 768px) {
     .container {
         width: 40vw;
@@ -54,11 +65,8 @@
     .cardBody {
         height: 30vh;
     }
-}
 
-.card_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+    .card_container > li {
+        width: unset;
+    }
 }
