@@ -12,8 +12,8 @@
 
 .greeting p {
     color: var(--color-main);
-    font-size: 5vw;
-    margin-bottom: 50px;
+    font-size: clamp(30px, 5vw, 60px);
+    margin-bottom: 2em;
 }
 
 .greeting {
