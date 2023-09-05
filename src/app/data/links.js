@@ -16,6 +16,10 @@ const links = [
     src: "#",
     translationId: "contact",
   },
+  {
+    src: "https://www.linkedin.com/in/jgarbin/",
+    translationId: "linkedin"
+  }
 ];
 
 export default links;

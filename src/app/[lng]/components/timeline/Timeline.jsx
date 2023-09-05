@@ -20,11 +20,11 @@ export default function ExpTimeline({ lng }) {
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         }}>{t("experience")}</h2>
-      <Timeline position='alternate'>
-        <Zink lng={lng} />
-        <ZinkTrainee lng={lng} />
-        <HierbabuenaHerboristeria lng={lng} />
-        <Press lng={lng} />
+      <Timeline>
+        <Zink lng={lng}  position='right' />
+        <ZinkTrainee lng={lng}  position='right' />
+        <HierbabuenaHerboristeria lng={lng}  position='left' />
+        <Press lng={lng} position='right' />
       </Timeline>
     </>
   );

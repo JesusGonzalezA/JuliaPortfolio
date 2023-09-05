@@ -39,7 +39,7 @@ export default function CTA({ lng }) {
           <p ref={ctaP}>{t("jobTitle")}</p>
           <div className={styles.buttonWrapper}>
             <a href="/assets/julia_garbin_lourido_cv.pdf" className={styles.downloadButton} download>{t("resume")} <FontAwesomeIcon icon={faFileDownload} /></a>
-            <a href="https://www.linkedin.com/in/jgarbin/" target="_blank" ref={ctaButton} className={styles.ctaButton}>
+            <a href="mailto:jugarlou@gmail.com" target="_blank" ref={ctaButton} className={styles.ctaButton}>
               {t("cta")} <FontAwesomeIcon icon={faUpRightFromSquare} />
             </a>
           </div>

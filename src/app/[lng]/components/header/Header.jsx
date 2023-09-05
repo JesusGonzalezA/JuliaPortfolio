@@ -22,7 +22,7 @@ export default function Header({ links, lng }) {
                 .map((l) => (
                     <span key={l}>
                         <a href={`/${l}`}>
-                            {l} version
+                            {l.toUpperCase()} version
                         </a>
                     </span>
                 ))

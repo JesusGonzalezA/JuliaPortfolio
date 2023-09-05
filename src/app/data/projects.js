@@ -9,11 +9,11 @@ const projects = [
   },
   {
     name: "Novatos",
-    src: "/assets/projects/proyecto4.png",
+    src: "/assets/projects/proyecto3.png",
   },
   {
     name: "Santa baia Jiu-Jitsu",
-    src: "/assets/projects/proyecto3.png",
+    src: "/assets/projects/proyecto4.png",
   },
 ];
 

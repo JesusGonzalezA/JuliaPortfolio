@@ -8,18 +8,18 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { useTranslation } from '../../../i18n/client';
 
-export default function HierbabuenaHerboristeria({ lng }) {
+export default function HierbabuenaHerboristeria({ lng, position }) {
     const { t } = useTranslation(lng);
 
     return (
-        <TimelineItem>
+        <TimelineItem position={position}>
             <TimelineOppositeContent color="text.secondary" sx={{ alignSelf: 'center' }}>
                 {t("herboristeriaPosition")}
             </TimelineOppositeContent>
 
             <TimelineSeparator>
                 <TimelineConnector />
-                    <TimelineDot variant="outlined" />
+                    <TimelineDot />
                 <TimelineConnector />
             </TimelineSeparator>
 
