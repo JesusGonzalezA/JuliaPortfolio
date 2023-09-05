@@ -23,7 +23,7 @@ export default function Toolset({ lng }) {
                         <Image src="/assets/tools/canva.svg" width={75} height={75} alt="Canva" />
                     </li>
                     <li title="Customer alliance">
-                        <Image src="/assets/tools/customer_alliance.png" width={75} height={75} alt="Customer alliance"  />
+                        <Image src="/assets/tools/customer_alliance.avif" width={75} height={75} alt="Customer alliance"  />
                     </li>
                     <li title="Google business">
                         <Image src="/assets/tools/google_business.png" width={75} height={75} alt="Google business" />
