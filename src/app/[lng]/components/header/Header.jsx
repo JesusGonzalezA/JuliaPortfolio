@@ -32,7 +32,7 @@ export default function Header({ links, lng }) {
                 <ul>
                     {links.map((link) => (
                     <li key={link.value}>
-                        <a href={link.src}>{link.value}</a>
+                        <a href={link.src} target={link.target}>{link.value}</a>
                     </li>
                     ))}
                 </ul>
