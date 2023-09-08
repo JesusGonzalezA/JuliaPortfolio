@@ -18,7 +18,7 @@ const videography = [
     titleTranslationId: "Soccer spot Videographer",
     contentTranslationId: "videographyContentSpot",
     url: "https://m.youtube.com/watch?v=x8rTxFrCwh4",
-    imageSrc: "/assets/eisv.png",
+    imageSrc: "/assets/eisv.jpg",
     altTranslationId: "Video and image vigo school",
   },
 ];
