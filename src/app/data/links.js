@@ -22,8 +22,10 @@ const links = [
   {
     src: "https://www.linkedin.com/in/jgarbin/",
     target: "_blank",
-    translationId: "linkedin"
-  }
+    translationId: "linkedin",
+    track: "true",
+    trackId: "linkedin",
+  },
 ];
 
 export default links;

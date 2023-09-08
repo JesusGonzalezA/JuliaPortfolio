@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import va from '@vercel/analytics';
 import styles from "./cta.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpRightFromSquare, faFileDownload } from "@fortawesome/free-solid-svg-icons";
@@ -32,14 +33,22 @@ export default function CTA({ lng }) {
     handleScroll()
   }, [])
 
+  const handleOnClickResume = () => {
+    va("resume")
+  }
+  
+  const handleOnClickContactEmail = () => {
+    va("contact by email")
+  }
+
   return (
     <>
       <section className={styles.greeting} ref={ctaSection}>
           <h2>Julia Garbín Lourido</h2>
           <p ref={ctaP}>{t("jobTitle")}</p>
           <div className={styles.buttonWrapper}>
-            <a href="/assets/CVJuliaGarbinLourido.pdf" className={styles.downloadButton} download>{t("resume")} <FontAwesomeIcon icon={faFileDownload} /></a>
-            <a href="mailto:jugarlou@gmail.com" target="_blank" ref={ctaButton} className={styles.ctaButton}>
+            <a href="/assets/CVJuliaGarbinLourido.pdf" className={styles.downloadButton} download onClick={handleOnClickResume}>{t("resume")} <FontAwesomeIcon icon={faFileDownload} /></a>
+            <a href="mailto:jugarlou@gmail.com" target="_blank" ref={ctaButton} className={styles.ctaButton} onClick={handleOnClickContactEmail}>
               {t("cta")} <FontAwesomeIcon icon={faUpRightFromSquare} />
             </a>
           </div>
