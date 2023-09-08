@@ -74,7 +74,7 @@ export default function Hamburguer ({ links }) {
                                 <ul ref={linksContainerRef}>
                                     {links.map((link) => (
                                         <li key={useId()}>
-                                            <a href={link.src}>{link.value}</a>
+                                            <a href={link.src} target={link.target}>{link.value}</a>
                                         </li>
                                     ))}
                                 </ul>

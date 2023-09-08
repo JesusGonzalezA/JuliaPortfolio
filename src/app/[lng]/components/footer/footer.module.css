@@ -1,18 +1,7 @@
 .footer {
-    padding-top: 40px;
-    background-color: inherit;
-}
-
-.footer ul {
-    margin-top: 40px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer li {
-    margin-bottom: 10px;
+    padding-top: 40px;
+    background-color: inherit;
 }

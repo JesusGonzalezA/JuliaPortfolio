@@ -9,11 +9,14 @@ import { useInView } from "framer-motion";
 function Project({ name, src }) {
   return (
     <div className={styles.project}>
-      <h3 className={styles.animatedTitle}>{name}</h3>
       <div className={styles.imgContainer}>
-        <Image src={src} fill role="presentation" />
+        <Image src={src} fill role="presentation" alt="" />
       </div>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore nesciunt alias dolore! Corporis odit provident aperiam porro facilis, veniam vel ab! Laboriosam at eveniet quam, rerum nihil assumenda consectetur atque!</p>
+      <div className={styles.content}>
+        <ul>
+          <li>{}</li>
+        </ul>
+      </div>
     </div>
   );
 }
@@ -34,9 +37,49 @@ export default function Projects({ lng }) {
       }} className={styles.title}>{t("projects")}</h2>
     
       <div>
-        {projects.map((project, index) => (
-          <Project key={`project_${index}`} {...project} />
-        ))}
+        <h3 className={styles.sectionTitle}>{t(projects.rrss.titleTranslationId)}</h3>
+
+        <ul className={styles.sectionList}>
+          { projects.rrss.contentTranslationId.map((tId) => <li>{t(tId)}</li>) }
+        </ul>
+
+        <div className={styles.projectContainer}>
+          {projects.rrss.projects.map((project, index) => (
+            <Project key={`project_rrss_${index}`} {...project} />
+            ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 className={styles.sectionTitle}>{t(projects.webdesign.titleTranslationId)}</h3>
+
+        <ul className={styles.sectionList}>
+          { projects.webdesign.contentTranslationId.map((tId) => <li>{t(tId)}</li>) }
+          <li>
+            {t("createdWebs0")} <a href="https://jugarlou.wixsite.com/santa-baia-jiu-jitsu" target="_blank">Santa baia</a>, {t("createdWeb1")}.&nbsp;
+            <a href="https://produpubli23k.wixsite.com/novatos" target="_blank">Novatos</a>, {t("createdWeb2")}
+          </li>
+        </ul>
+
+        <div className={styles.projectContainer}>
+          {projects.webdesign.projects.map((project, index) => (
+            <Project key={`project_webdesign_${index}`} {...project} />
+            ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 className={styles.sectionTitle}>{t(projects.rebranding.titleTranslationId)}</h3>
+
+        <ul className={styles.sectionList}>
+          { projects.rebranding.contentTranslationId.map((tId) => <li>{t(tId)}</li>) }
+        </ul>
+
+        <div className={styles.projectContainer}>
+          {projects.rebranding.projects.map((project, index) => (
+            <Project key={`project_rebranding_${index}`} {...project} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -21,13 +21,9 @@ export default function AboutMe ({ lng }) {
                 <div>
                     <div className={styles.imgContainer}>
                         <Image
-                            src="/assets/portrait.jpeg"
+                            src="/assets/portrait.png"
                             fill
-                            alt={"Julia Garbin"}
-                            style={{
-                                border: 'solid 1px transparent',
-                                borderRadius: '50%'
-                            }}      
+                            alt={"Julia Garbin"}   
                         />
                     </div>
                 </div>
@@ -39,6 +35,8 @@ export default function AboutMe ({ lng }) {
                             <p>{t("aboutMeP2")}</p>
 
                             <p>{t("aboutMeP3")}</p>
+
+                            <p>{t("aboutMeP4")}</p>
                         </div>
                     </div>
                 </div>

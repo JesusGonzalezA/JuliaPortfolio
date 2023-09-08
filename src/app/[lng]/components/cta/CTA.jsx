@@ -7,15 +7,18 @@ import { useTranslation } from "../../../i18n/client";
 
 export default function CTA({ lng }) {
   const { t } = useTranslation(lng);
-  const ctaSection = useRef(null)
-  const ctaButton = useRef(null)
+  const ctaSection = useRef(null);
+  const ctaButton = useRef(null);
+  const ctaP = useRef(null);
 
   const handleScroll = (e) => {
-    if (window.scrollY > (ctaButton.current.offsetTop - window.innerHeight/10 - ctaButton.current.getBoundingClientRect().height - 50)) {
-      ctaSection.current.style.zIndex = -1
-    } else {
-      ctaSection.current.style.zIndex = 0
-    }
+    const stickyHeaderWidth = window.innerHeight/10
+    const buttonWidth = ctaButton.current.getBoundingClientRect().height
+    const buttonYPos = ctaButton.current.offsetTop
+    const pMarginBottom = parseInt(document.defaultView.getComputedStyle(ctaP.current).marginBottom)
+    const limit = buttonYPos - stickyHeaderWidth - buttonWidth - pMarginBottom
+
+    ctaSection.current.style.zIndex = (window.scrollY < limit) ? 0 : -1
   }
 
   useEffect(() => {
@@ -23,16 +26,20 @@ export default function CTA({ lng }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-  })
+  }, [])
+
+  useEffect(() => {
+    handleScroll()
+  }, [])
 
   return (
     <>
       <section className={styles.greeting} ref={ctaSection}>
           <h2>Julia Garbín Lourido</h2>
-          <p>{t("jobTitle")}</p>
+          <p ref={ctaP}>{t("jobTitle")}</p>
           <div className={styles.buttonWrapper}>
-            <a href="/assets/julia_garbin_lourido_cv.pdf" className={styles.downloadButton} download>{t("resume")} <FontAwesomeIcon icon={faFileDownload} /></a>
-            <a href="https://www.linkedin.com/in/jgarbin/" target="_blank" ref={ctaButton} className={styles.ctaButton}>
+            <a href="/assets/CVJuliaGarbinLourido.pdf" className={styles.downloadButton} download>{t("resume")} <FontAwesomeIcon icon={faFileDownload} /></a>
+            <a href="mailto:jugarlou@gmail.com" target="_blank" ref={ctaButton} className={styles.ctaButton}>
               {t("cta")} <FontAwesomeIcon icon={faUpRightFromSquare} />
             </a>
           </div>

@@ -1,35 +1,18 @@
-.animatedTitle {
-  font-size: clamp(30px, 3vw, 80px);
-  line-height: 1.2;
-  color: var(--color-main-2);
-}
 
 .project {
-  height: 90vh;
-  width: 100%;
+  height: 45vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   scroll-snap-align: center;
   perspective: 500px;
 }
 
-.project > h3 {
-  height: 10vh;
-}
-
-.project > p {
-  height: 20vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
 .imgContainer {
   width: clamp(300px, 90vw, 700px);
-  height: 55vh;
+  height: 35vh;
   position: relative;
   overflow: hidden;
   align-self: center;
@@ -49,4 +32,38 @@
 
 .title {
   margin-bottom: 70px !important;
+}
+
+.sectionTitle {
+  font-size: clamp(30px, 3vw, 80px);
+  margin-bottom: 40px;
+}
+
+.sectionList {
+  line-height: 2rem;
+  margin-bottom: 40px;
+}
+
+.projectContainer {
+  display: flex;
+  width: 100vw;
+  margin-left: -5vw;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .imgContainer {
+    height: 55vh;
+  }
+
+  .project {
+    height: 60vh;
+    justify-content: center;
+  }
+
+  .sectionList {
+    margin-bottom: unset;
+  }
 }

@@ -10,7 +10,7 @@ const videography = [
   {
     titleTranslationId: "videographyTitleSurf",
     contentTranslationId: "videographyContentSurf",
-    url: "https://www.youtube.com/@PRADOSURFESCOLA",
+    url: "https://www.youtube.com/watch?v=x8rTxFrCwh4&ab_channel=PradoSurfEscola",
     imageSrc: "/assets/pradosurf.jpeg",
     altTranslationId: "videographyAltSurf",
   },

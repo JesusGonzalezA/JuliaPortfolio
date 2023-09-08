@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useId } from 'react';
 import Hamburguer from './Hamburguer';
 import styles from "./header.module.css";
 import { languages } from '../../../i18n/settings';
@@ -7,12 +6,14 @@ import { languages } from '../../../i18n/settings';
 export default function Header({ links, lng }) {
     return (
         <header className={styles.header}>
-            <div className={styles.logoContainer}>
-                <a href="#" aria-label="Top">
+            <div className={styles.logoOutterContainer}>
+                <a className={styles.logoContainer} href="#" aria-label="Top">
                     <Image
                         src="/assets/logo.png"
                         fill
                         role="presentation"
+                        alt=""
+                        sizes="10vh"
                     />
                 </a>
             </div>
@@ -21,7 +22,7 @@ export default function Header({ links, lng }) {
                 .map((l) => (
                     <span key={l}>
                         <a href={`/${l}`}>
-                            {l} version
+                            {l.toUpperCase()} version
                         </a>
                     </span>
                 ))
@@ -30,8 +31,8 @@ export default function Header({ links, lng }) {
             <nav className={[styles.nav, styles.horizontalNav].join(' ')}>
                 <ul>
                     {links.map((link) => (
-                    <li key={useId()}>
-                        <a href={link.src}>{link.value}</a>
+                    <li key={link.value}>
+                        <a href={link.src} target={link.target}>{link.value}</a>
                     </li>
                     ))}
                 </ul>
