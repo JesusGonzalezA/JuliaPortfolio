@@ -46,8 +46,7 @@
 
 .projectContainer {
   display: flex;
-  width: 100vw;
-  margin-left: -5vw;
+  width: 90vw;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -56,6 +55,7 @@
 @media only screen and (min-width: 768px) {
   .imgContainer {
     height: 55vh;
+    width: clamp(300px, 40vw, 700px);
   }
 
   .project {
@@ -65,5 +65,9 @@
 
   .sectionList {
     margin-bottom: unset;
+  }
+
+  .projectContainer {
+    margin-bottom: 40px;
   }
 }

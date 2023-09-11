@@ -12,11 +12,6 @@ function Project({ name, src }) {
       <div className={styles.imgContainer}>
         <Image src={src} fill role="presentation" alt="" />
       </div>
-      <div className={styles.content}>
-        <ul>
-          <li>{}</li>
-        </ul>
-      </div>
     </div>
   );
 }
@@ -40,7 +35,7 @@ export default function Projects({ lng }) {
         <h3 className={styles.sectionTitle}>{t(projects.rrss.titleTranslationId)}</h3>
 
         <ul className={styles.sectionList}>
-          { projects.rrss.contentTranslationId.map((tId) => <li>{t(tId)}</li>) }
+          { projects.rrss.contentTranslationId.map((tId) => <li key={`rrss_li_${tId}`}>{t(tId)}</li>) }
         </ul>
 
         <div className={styles.projectContainer}>
@@ -54,7 +49,7 @@ export default function Projects({ lng }) {
         <h3 className={styles.sectionTitle}>{t(projects.webdesign.titleTranslationId)}</h3>
 
         <ul className={styles.sectionList}>
-          { projects.webdesign.contentTranslationId.map((tId) => <li>{t(tId)}</li>) }
+          { projects.webdesign.contentTranslationId.map((tId) => <li  key={`webdesign_li_${tId}`}>{t(tId)}</li>) }
           <li>
             {t("createdWebs0")} <a href="https://jugarlou.wixsite.com/santa-baia-jiu-jitsu" target="_blank">Santa baia</a>, {t("createdWeb1")}.&nbsp;
             <a href="https://produpubli23k.wixsite.com/novatos" target="_blank">Novatos</a>, {t("createdWeb2")}
@@ -72,7 +67,7 @@ export default function Projects({ lng }) {
         <h3 className={styles.sectionTitle}>{t(projects.rebranding.titleTranslationId)}</h3>
 
         <ul className={styles.sectionList}>
-          { projects.rebranding.contentTranslationId.map((tId) => <li>{t(tId)}</li>) }
+          { projects.rebranding.contentTranslationId.map((tId) => <li  key={`rebranding_li_${tId}`}>{t(tId)}</li>) }
         </ul>
 
         <div className={styles.projectContainer}>

@@ -1,4 +1,5 @@
 import { dir } from "i18next";
+import { Analytics } from "@vercel/analytics/react";
 import { languages } from "../i18n/settings";
 import "./globals.css";
 
@@ -58,6 +59,7 @@ export default function RootLayout({ children, params: { lng } }) {
         <link rel="icon" hreaf="./favicon.ico" />
       </head>
       <body>{children}</body>
+      <Analytics />
     </html>
   );
 }
