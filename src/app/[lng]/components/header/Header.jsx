@@ -1,17 +1,10 @@
 "use client";
-import va from '@vercel/analytics';
 import Image from 'next/image';
 import Hamburguer from './Hamburguer';
 import styles from "./header.module.css";
 import { languages } from '../../../i18n/settings';
 
 export default function Header({ links, lng }) {
-    const handleOnClickLink = (link) => {
-        if (link.track) {
-            va(link.trackId)
-        }
-    }
-
     return (
         <header className={styles.header}>
             <div className={styles.logoOutterContainer}>
@@ -40,7 +33,7 @@ export default function Header({ links, lng }) {
                 <ul>
                     {links.map((link) => (
                     <li key={link.value}>
-                        <a href={link.src} target={link.target} onClick={() => handleOnClickLink(link)}>{link.value}</a>
+                        <a href={link.src} target={link.target}>{link.value}</a>
                     </li>
                     ))}
                 </ul>

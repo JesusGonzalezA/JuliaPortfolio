@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import va from '@vercel/analytics';
 import styles from "./header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -58,16 +57,10 @@ export default function Hamburguer ({ links }) {
         }
     }
 
-    const handleOnClickLink = (link) => {
-        if (link.track) {
-            va(link.trackId)
-        }
-    }
-
     return (
         <div className={styles.hamburguer}>
             <button ref={openButtonRef} onClick={openDialog} aria-label="Menu">
-                Menu <FontAwesomeIcon icon={faBars} />
+                Menu <FontAwesomeIcon icon={faBars} style={{ maxHeight: '24px' }} />
             </button>
             <dialog ref={dialogRef} className={styles.dialog} aria-modal="true" onKeyDown={handleDialogKeyDown}>
                     <div className={styles.dialogContainer}>
@@ -81,7 +74,7 @@ export default function Hamburguer ({ links }) {
                                 <ul ref={linksContainerRef}>
                                     {links.map((link) => (
                                         <li key={useId()}>
-                                            <a href={link.src} target={link.target} onClick={() => handleOnClickLink(link)}>{link.value}</a>
+                                            <a href={link.src} target={link.target}>{link.value}</a>
                                         </li>
                                     ))}
                                 </ul>
